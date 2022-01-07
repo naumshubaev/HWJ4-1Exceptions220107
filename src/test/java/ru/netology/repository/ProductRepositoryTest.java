@@ -42,30 +42,3 @@ public class ProductRepositoryTest {
         });
     }
 }
-
-/*
-package ru.netology.repository;
-
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
-
-class ProductRepositoryTest {
-
-    @Test
-    void save() {
-    }
-
-    @Test
-    void findAll() {
-    }
-
-    @Test
-    void findById() {
-    }
-
-    @Test
-    void removeById() {
-    }
-}
-*/
