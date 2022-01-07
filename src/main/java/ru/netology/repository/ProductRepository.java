@@ -28,24 +28,22 @@ public class ProductRepository {
 
     public void removeById(int id) {
 if (findById(id) == null) {
-    throw new NotFoundException("The product id " + id + " is invalid");
+    throw new NotFoundException("Element with id: " + id + " not found");
         }
         int length = items.length - 1;
 
         Product[] tmp = new Product[length];
         int index = 0;
         for (Product item : items) {
-//        for (int i = 0; i < length; i++) {
 
             if (item.getId() != id) {
-//            if (!items[i].equals(id)) {
-                tmp[index] = item; //s[i];
+                tmp[index] = item;
                 index++;
             }
         }
         items = tmp;
     }
-// returns reversed(!) array
+
     public Product[] getAll() {
         Product[] result = new Product[items.length];
         for (int i = 0; i < result.length; i++) {
@@ -55,5 +53,3 @@ if (findById(id) == null) {
         return result;
     }
 }
-
-// "object with id" + ???id + "does not exist"
